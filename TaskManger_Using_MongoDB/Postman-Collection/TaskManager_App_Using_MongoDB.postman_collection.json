@@ -1,0 +1,484 @@
+{
+	"info": {
+		"_postman_id": "d39557a5-327f-490e-b10b-6302d07a1f12",
+		"name": "TaskManager_App_Using_MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ajay\",\r\n  \"email\": \"ajay@yopmail.com\",\r\n  \"password\": \"123456\",\r\n  \"age\": 20  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/registeruser",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"registeruser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ajay@yopmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/userlogin",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"userlogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch User Details By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDQ3OTg5ZjQ2OTY1MTA5Y2M2NzllMzkiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTMwNTAxMX0.D5ThGJe0keykIVO9fic-0K89M2gOvCxQZWzSy_vpTKs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/userdetail/6047989f46965109cc679e39",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"userdetail",
+								"6047989f46965109cc679e39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDQ3OTg5ZjQ2OTY1MTA5Y2M2NzllMzkiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTMwNTAxMX0.D5ThGJe0keykIVO9fic-0K89M2gOvCxQZWzSy_vpTKs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/allusers",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"allusers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Details By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDQ3OTg5ZjQ2OTY1MTA5Y2M2NzllMzkiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTMwNTAxMX0.D5ThGJe0keykIVO9fic-0K89M2gOvCxQZWzSy_vpTKs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Nehaa\",\r\n  \"email\": \"neha@yopmail.com\",\r\n  \"password\": \"123456\",\r\n  \"age\": 20  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}//updateuser/6047989f46965109cc679e39",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"",
+								"updateuser",
+								"6047989f46965109cc679e39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDQ3OTg5ZjQ2OTY1MTA5Y2M2NzllMzkiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTMwNTAxMX0.D5ThGJe0keykIVO9fic-0K89M2gOvCxQZWzSy_vpTKs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/deleteuser",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"deleteuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDQ3OThlYjQ2OTY1MTA5Y2M2NzllM2IiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTMwNTcwM30.7ERCckuSllNjud-adjwXRAEqjvJBK7NN3fs3w3f-Uxo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/userlogout",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"userlogout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Profile Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDQ3OThlYjQ2OTY1MTA5Y2M2NzllM2IiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNjg0NTc3MX0.7hUJLDCCO_0E6l9DhWOvO9fkgNXOlH7wgsYasW5KPmY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/deleteProfileImage",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"deleteProfileImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload User Profile Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDQ3OThlYjQ2OTY1MTA5Y2M2NzllM2IiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNjg0NTc3MX0.7hUJLDCCO_0E6l9DhWOvO9fkgNXOlH7wgsYasW5KPmY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/E:/FDC_Indore/IMG-20190505-WA0033.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/uploadProfileImage",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"uploadProfileImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch User Profile Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDQ3OThlYjQ2OTY1MTA5Y2M2NzllM2IiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNjg0NTc3MX0.7hUJLDCCO_0E6l9DhWOvO9fkgNXOlH7wgsYasW5KPmY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/fetchProfileImage/604798eb46965109cc679e3b",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"fetchProfileImage",
+								"604798eb46965109cc679e3b"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "User Routes"
+		},
+		{
+			"name": "TASK",
+			"item": [
+				{
+					"name": "Create Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDQ3OThlYjQ2OTY1MTA5Y2M2NzllM2IiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTMwNTc3OH0.VmH0hAcKMSBOuFblcr1uavOZhv_rqyNsg4XVqwA9QOM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"second task\",\r\n    \"completed\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/createtask",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"createtask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Task Details get by id with user information",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDQ3OThlYjQ2OTY1MTA5Y2M2NzllM2IiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTMwNTc3OH0.VmH0hAcKMSBOuFblcr1uavOZhv_rqyNsg4XVqwA9QOM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/taskdetails/60479ca25b6e2b03a479f36c",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"taskdetails",
+								"60479ca25b6e2b03a479f36c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update task details by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDQ3OThlYjQ2OTY1MTA5Y2M2NzllM2IiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTMwNTc3OH0.VmH0hAcKMSBOuFblcr1uavOZhv_rqyNsg4XVqwA9QOM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"first task\",\r\n    \"completed\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/updatetask/60479ca25b6e2b03a479f36c",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"updatetask",
+								"60479ca25b6e2b03a479f36c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All Tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDQ3OThlYjQ2OTY1MTA5Y2M2NzllM2IiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTMwNTc3OH0.VmH0hAcKMSBOuFblcr1uavOZhv_rqyNsg4XVqwA9QOM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/alltasks?completed=&page=1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"alltasks"
+							],
+							"query": [
+								{
+									"key": "completed",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDQ3OThlYjQ2OTY1MTA5Y2M2NzllM2IiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTMwNTc3OH0.VmH0hAcKMSBOuFblcr1uavOZhv_rqyNsg4XVqwA9QOM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/deletetask/6047a669c6ca5e2550605065",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"deletetask",
+								"6047a669c6ca5e2550605065"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Tasks Routes"
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "http://localhost:3000/api/v1"
+		}
+	]
+}

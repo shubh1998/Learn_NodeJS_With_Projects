@@ -1,0 +1,41 @@
+<html>
+<header>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+</header>
+
+<body>
+    <div class="container ">
+        <h1>Insert Teacher</h1>
+        <form action='/admin/<%=admin%>/teachers/insert' method=post>
+            <div class="form-group">
+                <label for="Id">Teacher ID</label>
+                <input type="text" id="Id" class='form-control' name="teacher[empId]" placeholder="Teacher ID">
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class='form-control' name="teacher[name]" placeholder="Teacher Name">
+            </div>
+            <div class="form-group">
+                <label for="pass">Password</label>
+                <input type="password" id="pass" class='form-control' name="teacher[password]" placeholder="Teacher ID">
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="text" id='age' class='form-control' name="teacher[age]" placeholder="Teacher Age">
+            </div>
+            <div class="form-group">
+                <label for="exp">Experience</label>
+                <input type="text" class='form-control' name="teacher[experiance]" id="exp"
+                    placeholder="Teacher Experience">
+            </div>
+            <div class="form-group">
+                <label for="spc">Specialization</label>
+                <input type="text" class='form-control' name="teacher[specialization]" id="spc"
+                    placeholder="Teacher Specialization">
+            </div>
+            <input type="submit" class='btn btn-primary' value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

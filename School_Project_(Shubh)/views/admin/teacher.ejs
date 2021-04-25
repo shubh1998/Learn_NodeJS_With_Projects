@@ -1,0 +1,40 @@
+<html>
+<header>
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+  <style>
+    #teacher-form {
+      display: inline;
+    }
+
+    a {
+      margin-right: 10px;
+    }
+  </style>
+</header>
+
+<body>
+  <div class="container ">
+    <h1>Teacher</h1>
+    <div class='jumbotron'>
+      <h3>Teacher ID <span class="label label-default"><%=emp.empId%></span></h3>
+      <h3>Name <span class="label label-default"><%=emp.name%></span></h3>
+      <h3>Age <span class="label label-default"><%=emp.age%></span></h3>
+      <h3>Experience <span class="label label-default"><%=emp.experiance%></span></h3>
+      <h3>Specialization <span class="label label-default"><%=emp.specialization%></span></h3>
+    </div>
+
+    <a href="/admin/<%=admin%>/teachers/<%=emp.empId%>/edit" class='btn btn-warning'>Update Teacher</a>
+    <a href="/admin/<%=admin%>/teachers/<%=emp.empId%>/subjects" class='btn btn-primary'>View Subjects</a>
+    <form id='teacher-form' class='form-inline' action="/admin/<%=admin%>/teachers/<%=emp.empId%>/delete?_method=DELETE"
+      method="post">
+      <input class='btn btn-danger inline' type="submit" value="Delete"></form>
+    <br>
+    <br>
+
+    <div>
+      <a href="/admin/<%=admin%>/teachers" class='btn btn-primary'>Back</a>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<html>
+<header>
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+</header>
+
+<body>
+  <div class="container">
+    <h1>All teachers</h1>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <td>EmpId</td>
+          <td>Name</td>
+          <td>age</td>
+          <td>Experiance</td>
+          <td>specialization</td>
+          <td>Options</td>
+        </tr>
+      </thead>
+
+      <% teachers.forEach(teacher => { %>
+      <tr>
+        <td><%= teacher.empId %> </td>
+        <td><%= teacher.name %></td>
+        <td><%= teacher.age %></td>
+        <td><%= teacher.experiance %></td>
+        <td><%= teacher.specialization %></td>
+        <td><a class='btn btn-warning' href="/admin/<%=admin%>/teachers/<%=teacher.empId%>">Show</a></td>
+      </tr>
+      <% }) %>
+    </table>
+    <a href="/admin/<%=admin%>" class='btn btn-primary'>Back</a>
+  </div>
+</body>
+
+</html>

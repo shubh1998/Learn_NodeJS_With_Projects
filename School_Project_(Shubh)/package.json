@@ -1,0 +1,26 @@
+{
+  "name": "school",
+  "version": "1.0.0",
+  "description": "school app implementing crud and session",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Shubh",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.20.8",
+    "method-override": "^3.0.0",
+    "objection": "^2.1.2",
+    "pg": "^7.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

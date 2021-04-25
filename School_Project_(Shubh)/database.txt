@@ -1,0 +1,13 @@
+user ->  empId string() unique notNull Primary ,  name string() , password string() not null, isAdmin boolean , email string() notNull , age integer notNull , exprience decimal , specialisation string() ;
+
+subject -> subId string() unique() notNull() primary(), subjectName notNull();
+
+student -> rollNo string() unique primary notNull , name string notnull , class string , age integer; 
+
+Teacher-Subject ->  subID refrences empID
+
+==================================================================================================
+controller
+admin ->  LandingPage, showAllTeacher  , showTeacher , addTeacher , removeTeacher , assignSubjectToTeacher
+
+teacher -> editProfile , showAllStudents , EditSpecificStudent.

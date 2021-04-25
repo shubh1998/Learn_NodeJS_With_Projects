@@ -1,0 +1,32 @@
+<html>
+<header>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+</header>
+
+<body>
+    <div class="container ">
+        <h1>Insert Student</h1>
+        <form action='/teacher/<%=teacher%>/students/insert' method=post>
+            <div class="form-group">
+                <label for="Id">Student Roll Number</label>
+                <input type="text" id="Id" class='form-control' name="student[rollNo]"
+                    placeholder="Student Roll Number">
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class='form-control' name="student[name]" placeholder="Student Name">
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="text" id='age' class='form-control' name="student[age]" placeholder="Student Age">
+            </div>
+            <div class="form-group">
+                <label for="spc">Student Class</label>
+                <input type="text" class='form-control' name="student[class]" id="spc" placeholder="Student Class">
+            </div>
+            <input type="submit" class='btn btn-primary' value="Insert">
+        </form>
+    </div>
+</body>
+
+</html>

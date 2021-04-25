@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "9a1ce573-9270-4fbe-8a63-60fbc1039a34",
+		"name": "knex-objection-NodeJS-CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "{{baseurl}}/api/v1/createCity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Indore\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/createCity",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"createCity"
+							]
+						},
+						"description": "Api Endpoint to Create City"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/api/v1/allCities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/v1/allCities",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"allCities"
+							]
+						},
+						"description": "Api End Point to get All Cities"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/api/v1/deleteCityById?id=4",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/v1/deleteCityById?id=4",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"deleteCityById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						},
+						"description": "Api End Point to Delete a City By its id"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Country",
+			"item": [
+				{
+					"name": "{{baseurl}}/api/v1/createCountry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"India\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/createCountry",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"createCountry"
+							]
+						},
+						"description": "Appi End Point to Create Counytry"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/api/v1/deleteCountryById?id=3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/v1/deleteCountryById?id=3",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"deleteCountryById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						},
+						"description": "Api End Point to Delete Country By Id"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/api/v1/allCountries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/v1/allCountries",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"allCountries"
+							]
+						},
+						"description": "Api End Point to Fetch All Countries"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "{{baseurl}}/api/v1/createJob",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Accountant\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/createJob",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"createJob"
+							]
+						},
+						"description": "Api End Point to Create Job"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/api/v1/allJobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/v1/allJobs",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"allJobs"
+							]
+						},
+						"description": "Api End Point to Fetch All jobs"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/api/v1/updateJob?id=4",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Marketing Manager\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/updateJob?id=4",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"updateJob"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						},
+						"description": "Update Job's Details by its id"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/api/v1/deleteJobById?id=4",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/v1/deleteJobById?id=4",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"deleteJobById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						},
+						"description": "Api End Point to Delete Job By Id"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "{{baseurl}}/api/v1/registerPerson",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Shubham Gupta\",\n\t\"email\": \"shubham@email.com\",\n\t\"age\": 21,\n\t\"cityId\":1,\n\t\"countryId\":1,\n\t\"jobId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/registerPerson",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"registerPerson"
+							]
+						},
+						"description": "Api End Point to Create Or Register a Person/User"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/api/v1/getPersonById?id=1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/getPersonById?id=1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"getPersonById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Api End POint to Get Person Details By Id"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/api/v1/updatePerson?id=2",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Jai Patidar\",\n\t\"email\": \"jai@email.com\",\n\t\"age\": 28,\n\t\"cityId\":2,\n\t\"countryId\":1,\n\t\"jobId\":\"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/updatePerson?id=2",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"updatePerson"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						},
+						"description": "Api End Point To Update Person Details By Its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/api/v1/allPersons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/v1/allPersons",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"allPersons"
+							]
+						},
+						"description": "Api End POint to Fetch All Persons"
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/api/v1/deletePersonById?id=3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/v1/deletePersonById?id=3",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"deletePersonById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						},
+						"description": "Api End Point to Delete Person's Info By Its id"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "9fe78927-0cc5-481d-ad33-ae5f8bd9803a",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	],
+	"protocolProfileBehavior": {}
+}

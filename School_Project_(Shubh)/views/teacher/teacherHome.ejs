@@ -1,0 +1,31 @@
+<html>
+<header>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+</header>
+
+<body>
+    <div class="container ">
+        <h1>Welcome <%=emp.name%></h1>
+        <div class='jumbotron'>
+            <h3>Teacher ID <span class="label label-default"><%=emp.empId%></span></h3>
+            <h3>Name <span class="label label-default"><%=emp.name%></span></h3>
+            <h3>Age <span class="label label-default"><%=emp.age%></span></h3>
+            <h3>Experience <span class="label label-default"><%=emp.experiance%></span></h3>
+            <h3>Specialization <span class="label label-default"><%=emp.specialization%></span></h3>
+        </div>
+
+        <a href="/teacher/<%=emp.empId%>/edit" class='btn btn-warning'>Update Profile</a>
+        <br>
+        <br>
+        <a href="/teacher/<%=emp.empId%>/students" class='btn btn-primary'>Show All Students</a>
+        <br>
+        <br>
+        <a href="/teacher/<%=emp.empId%>/students/insert" class='btn btn-primary'>Add New Student</a>
+        <br><br>
+        <form action="/logout?_method=DELETE" method="post">
+            <input type="submit" value="Logout" class="btn btn-danger">
+        </form>
+    </div>
+</body>
+
+</html>

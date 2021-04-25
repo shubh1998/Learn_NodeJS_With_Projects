@@ -1,0 +1,41 @@
+<html>
+<header>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+</header>
+
+<body>
+    <div class="container">
+        <h1>Subjects Taught by <%=teacher%></h1>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Subject Code</th>
+                    <th>Subject Name</th>
+
+                </tr>
+            </thead>
+
+            <% subjects.forEach(subject => { %>
+            <tr>
+                <td><%= subject.subId %> </td>
+                <td><%= subject.subjectName %></td>
+            </tr>
+            <% }) %>
+        </table>
+        <div>
+            <form action="/admin/<%=admin%>/teachers/<%=teacher%>/subjects" method="POST" class="form-inline">
+                <div class="form-group">
+                    <select name="sub" class="form-control">
+                        <% allSubjects.forEach(subject => { %>
+                        <option value="<%=subject.subId%>"><%=subject.subjectName%></option>
+                        <% }) %>
+                    </select>
+                </div>
+                <input type="submit" class="btn btn-primary" value="Add">
+            </form>
+        </div>
+        <a href="/admin/<%=admin%>/teachers/<%=teacher%>" class='btn btn-primary'>Back</a>
+    </div>
+</body>
+
+</html>

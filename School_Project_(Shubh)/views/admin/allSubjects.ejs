@@ -1,0 +1,40 @@
+<html>
+<header>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+</header>
+
+<body>
+    <div class="container">
+        <h1>All Subjects</h1>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Subject Code</th>
+                    <th>Subject Name</th>
+
+                </tr>
+            </thead>
+
+            <% subjects.forEach(subject => { %>
+            <tr>
+                <td><%= subject.subId %> </td>
+                <td><%= subject.subjectName %></td>
+            </tr>
+            <% }) %>
+        </table>
+        <div>
+            <form action="/admin/<%=admin%>/subjects" method="POST" class="form-inline">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="subject[subId]" placeholder="Subject Code">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="subject[subjectName]" placeholder="Subject Name">
+                </div>
+                <input type="submit" class="btn btn-primary" value="Add">
+            </form>
+        </div>
+        <a href="/admin/<%=admin%>" class='btn btn-primary'>Back</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "4cf5d4e5-d0c7-44d0-ad5e-976035651960",
+		"name": "TASK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hotel",
+			"item": [
+				{
+					"name": "{{baseurl}}/addHotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hotel_name\": \"Papaya hotel\",\r\n    \"location\": \"41, hshsf, hshf\",\r\n    \"postal_code\": \"12341\",\r\n    \"city\": \"Indore\",\r\n    \"state\": \"MP\",\r\n    \"country\": \"India\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/addHotel",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"addHotel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/allHotels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/allHotels",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"allHotels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/hotelDetail?id=5f6a0cfdcff53a22141b6d1f",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/hotelDetail?id=5f6a0da0cff53a22141b6d22",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"hotelDetail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5f6a0da0cff53a22141b6d22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/deleteHotel?id=5f6a0da0cff53a22141b6d22",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/deleteHotel?id=5f6a0cfdcff53a22141b6d1f",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"deleteHotel"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5f6a0cfdcff53a22141b6d1f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/updateHotel",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"5f6a0cfdcff53a22141b6d1f\",\r\n    \"hotel_name\": \"Papaya hotel\",\r\n    \"location\": \"41, hshsf, hshf\",\r\n    \"postal_code\": \"12341\",\r\n    \"city\": \"Indore\",\r\n    \"state\": \"MP\",\r\n    \"country\": \"India\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/updateHotel",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"updateHotel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/hotelsNearToUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNmFlOTZkMWY4NjYwMmQwMGNhOGI4NiIsInJvbGUiOiJDVVNUT01FUlVTRVIiLCJpYXQiOjE2MDA4NDIxODZ9.yjh4t5C0Gg_gOtJZPVcAPB4xmLLnZQqQBHD-U7X9kNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/hotelsNearToUser",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"hotelsNearToUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/updateUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNmFlOTZkMWY4NjYwMmQwMGNhOGI4NiIsInJvbGUiOiJDVVNUT01FUlVTRVIiLCJpYXQiOjE2MDA4NDIxODZ9.yjh4t5C0Gg_gOtJZPVcAPB4xmLLnZQqQBHD-U7X9kNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"jai\",\r\n    \"email\": \"jai@yopmail.com\",\r\n    \"password\": \"123456\",\r\n    \"user_type\": \"CUSTOMERUSER\",\r\n    \"location\": \"41, hshsf, hshf\",\r\n    \"postal_code\": \"123456\",\r\n    \"city\": \"Indore\",\r\n    \"country\": \"India\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/updateUser",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "{{baseurl}}/loginuser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"jai@yopmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/loginuser",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"loginuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/registerUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"jai\",\r\n    \"email\": \"jai@yopmail.com\",\r\n    \"password\": \"123456\",\r\n    \"user_type\": \"CUSTOMERUSER\",\r\n    \"location\": \"41, hshsf, hshf\",\r\n    \"postal_code\": \"123456\",\r\n    \"city\": \"Indore\",\r\n    \"country\": \"India\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/registerUser",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"registerUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/approveUser?id=5f6a0da0cff53a22141b6d22",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/approveUser?id=5f6a0da0cff53a22141b6d22",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"approveUser"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5f6a0da0cff53a22141b6d22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{baseurl}}/logoutUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNmFkNzA3NWRlZTJmODRhNDVjYzQ0YiIsInJvbGUiOiJCVVNJTkVTU1VTRVIiLCJpYXQiOjE2MDA4Mzc5MjZ9.ZiyuRmTtFBRkQIba0AnA4ez592BVoOpoNrgodCwrg_0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/logoutUser",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"logoutUser"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

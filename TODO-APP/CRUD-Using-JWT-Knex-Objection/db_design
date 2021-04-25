@@ -1,0 +1,57 @@
+#   users Table  #
+--------------------------------------
+id - { primary key }
+name
+email
+password
+city_id - { foreign key = points to city table primary key }
+state_id - { foreign key = points to state table primary key }
+country_id - { foreign key = points to country table primary key }
+mobile
+address
+profile_pic
+user_type
+is_active ('true' or 'false')
+gender
+auth_token
+forgot_password_token
+timestamp - (created_at, updated_at)
+=================================================================
+
+
+#   city Table  #
+--------------------------------------
+id
+city_name
+state_id - { foreign key = points to state table primary key }
+country_id - { foreign key = points to country table primary key }
+timestamp - (created_at, updated_at)
+=================================================================
+
+
+#   state Table  #
+--------------------------------------
+id - { primary key }
+state_name
+country_id - { foreign key = points to country table primary key }
+timestamp - (created_at, updated_at)
+=================================================================
+
+
+#   country Table  #
+--------------------------------------
+id - { primary key }
+country_name
+country_code
+timestamp - (created_at, updated_at)
+=================================================================
+
+
+#    todo_notes Table  #
+--------------------------------------
+id - { primary key }
+user_id - { foreign key = points to users table primary key }
+notes_title
+notes_description
+timestamp - (created_at, updated_at)
+=================================================================

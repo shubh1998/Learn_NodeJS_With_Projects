@@ -1,0 +1,36 @@
+<html>
+<header>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+</header>
+
+<body>
+    <div class="container ">
+        <h1>Update <%=teacher.name%></h1>
+
+        <form action='/teacher/<%=teacher.empId%>?_method=PUT' method=post>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class='form-control' name="teacher[name]" value="<%=teacher.name%>">
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="text" id='age' class='form-control' name="teacher[age]" value="<%=teacher.age%>">
+            </div>
+            <div class="form-group">
+                <label for="exp">Experience</label>
+                <input type="text" class='form-control' name="teacher[experiance]" id="exp"
+                    value="<%=teacher.experiance%>">
+            </div>
+            <div class="form-group">
+                <label for="spc">Specialization</label>
+                <input type="text" class='form-control' name="teacher[specialization]" id="spc"
+                    value="<%=teacher.specialization%>">
+            </div>
+            <input type="submit" class='btn btn-primary' value="Submit">
+        </form>
+
+
+    </div>
+</body>
+
+</html>
